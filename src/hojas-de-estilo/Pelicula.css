@@ -1,0 +1,33 @@
+img {
+    border-radius: 2%;
+    background-color: aquamarine;
+    box-shadow: 2px 5px 9px -3px rgba(0,0,0,0.75);
+    cursor: pointer;
+}
+
+h2 {
+    font-size: 1rem;
+    line-height: 2;
+    font-weight: 500;
+}
+
+h3 {
+    font-size: 0.9rem;
+    line-height: 2;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+p {
+    color: grey;
+    font-size: 0.8rem;
+    
+}
+
+p:first-of-type::after {
+    content: "·";
+}
+
+.informacion {
+    display: flex;
+}

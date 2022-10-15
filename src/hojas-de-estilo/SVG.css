@@ -1,0 +1,5 @@
+svg {
+    color: var(--mainColor);
+    transform: scale(1.4);
+    cursor: pointer;
+}

@@ -1,0 +1,24 @@
+
+form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0.2rem 0 0.9rem 0;
+}
+
+input {
+    background-color: #f5f7f9;
+    border-radius: 50px;
+    border: none;
+    font-family: 'Roboto', sans-serif;
+    text-align: center;
+    padding: 5px 2px;
+    color: #404040;
+}
+
+input:focus, input:active, form:focus, form:active {
+    outline: 1px solid var(--greyColor);
+   
+}
+
+/*El icono de la lupa no cabe en el buscador. Queda fuera. Tendré que cambiar la spropiedade sy quizás añadirlas al form, o pintarlo todo dentro de un div de fondo gris. También cambiar el CSS de SVG para que no afecte a todos los iconos, o distinguirlos con una clase.*/
