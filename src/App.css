@@ -2,7 +2,8 @@
 
 :root {
   --mainColor: #6532fe;
-  --auxiliarColor: #5eded9;
+  /* --auxiliarColor: #5eded9; */
+  --auxiliarColor: #1df7c0;
   --greyColor: #e3e3e3;
 
 }
@@ -31,16 +32,23 @@ h1 {
   font-weight: 500;
 }
 
+/* .contenedor-peliculas-carrousel {
+  position: relative;
+} */
 
 .peliculas-carrousel {
   display: flex;
   gap: 1rem;
   margin-bottom: 3rem;
-  overflow: hidden;
+  overflow-x: scroll;
+  scroll-snap-type: x proximity;
+  padding-right: 0;
+ 
 }
 
 .h2-titles, .h1-titles {
   display: flex;
   justify-content: space-between;
   padding: 0.7rem 0;
+
 }

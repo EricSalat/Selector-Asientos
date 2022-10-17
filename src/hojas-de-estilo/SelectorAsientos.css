@@ -1,0 +1,93 @@
+
+/*Eliminar este selector cuando entienda la jerarquia de estas hojas CSS. Dejar solo en .container*/
+.app-asientos {
+    background-color: #fff;
+    padding-top: 1.5rem;
+}
+
+.subtitulo {
+    text-align: center;
+    line-height: 2;
+}
+
+.asientos-contenedor {
+    display: flex;
+    justify-content: space-between;
+    margin: 10px 0 40px 0;
+}
+
+.asiento {
+    width: 23px;
+    height: 23px;
+    border: 1px solid var(--greyColor);
+    gap: 10px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.asiento:hover, .asiento-seleccionado {
+    background-color: var(--auxiliarColor);
+    border-color: var(--auxiliarColor);
+}
+
+.asiento-ocupado {
+    background-color: var(--greyColor);
+}
+
+.asiento-ocupado:hover {
+    background-color: var(--greyColor);
+    border-color: var(--greyColor);
+    user-select: none;
+    cursor: not-allowed;
+
+
+}
+
+.asientos-izquierda, .asientos-centro, .asientos-derecha {
+    gap: 5px 5px;
+    width: 90px;
+    /* background-color: bisque; */
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.asientos-centro {
+    width: 150px;
+}
+
+.asientos-leyenda, .contenedor-leyenda {
+    display: flex;
+    justify-content: space-around;
+}
+
+.contenedor-leyenda {
+    gap: 5px;
+}
+
+.asientos-leyenda p {
+    font-size: 12px;
+}
+
+/*Mejorar esto con hooks de react*/
+.circulo, .seleccionado, .reservado .disponible {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    align-self: center;
+}
+
+
+.reservado {
+    background: var(--greyColor);
+    border: 1px solid var(--greyColor);
+}
+
+.seleccionado {
+    background-color: var(--auxiliarColor);
+    border: v1px solid ar(--auxiliarColor);
+}
+
+.disponible {
+    background-color: transparent;
+    border: 1px solid var(--greyColor);
+}

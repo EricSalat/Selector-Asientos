@@ -1,9 +1,10 @@
 import React from "react";
+// import { Link } from "react-router-dom"
 import "../hojas-de-estilo/BotonMas.css";
 
 function BotonMas() {
     return(
-        <button type="button">Ver más</button>       
+        <button type="button">Ver más</button>  
     );
 }
 

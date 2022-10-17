@@ -11,7 +11,7 @@ function Pelicula(props) {
                 height="200" />
             <h3>{props.title}</h3>
             <div className="informacion">
-                <p>{props.language} </p>
+                <p className ="idioma-pelicula">{props.language} </p>
                 <p>{props.category}</p>
             </div>
         </div> 

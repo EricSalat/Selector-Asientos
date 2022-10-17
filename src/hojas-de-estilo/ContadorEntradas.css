@@ -1,0 +1,8 @@
+.contador-entradas {
+    display: flex;  
+}
+
+.contador-niños, .contador-adultos {
+    flex: 1;
+    background-color: beige;
+}

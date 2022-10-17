@@ -21,11 +21,10 @@ h3 {
 p {
     color: grey;
     font-size: 0.8rem;
-    
 }
 
-p:first-of-type::after {
-    content: "·";
+.idioma-pelicula::after{
+    content: "· ";
 }
 
 .informacion {
