@@ -1,8 +1,54 @@
 .contador-entradas {
-    display: flex;  
+    display: flex; 
+    text-align: center;
+    align-self: center; 
+    
 }
 
 .contador-niños, .contador-adultos {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    flex-wrap: wrap;
     flex: 1;
-    background-color: beige;
+    text-align: center;
+    background-color: inherit;
+    gap: 1rem;
+    border: 1px solid var(--greyColor);
+    padding: 1.2rem 0.90rem;
+}
+
+
+.contador-adultos button, .contador-niños button {
+    text-align: center;
+    align-self: center;
+}
+
+
+.contador-adultos p, .contador-niños p {
+    font-size: 0.95rem;
+    text-align: center;
+    font-weight: 500;
+    align-self: center;
+    color: #000;
+    padding-right: 5px;
+}
+
+.contador-iconos {
+    color: var(--mainColor);
+    font-weight: 900;
+    font-size: 0.9rem;
+}
+
+.boton-compra {
+    text-align: center;
+    color: #fff;
+    font-size: 0.95rem;
+    font-weight: 500;
+    width: 100%;
+    background-color: var(--mainColor);
+    padding: 1.2rem 0;
+    cursor: pointer;
+
 }

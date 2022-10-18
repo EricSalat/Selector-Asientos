@@ -1,21 +1,27 @@
-import React from "react";
+import React, { useState } from "react";
 import "../hojas-de-estilo/SelectorAsientos.css";
 import ContadorEntradas from "./ContadorEntradas";
-import { useState } from "react";
+
 
 
 
 function SelectorAsientos() {
   
-  const [contador, setContador] = useState(0);
+  let [contador, setContador] = useState(0);
 
-  const aumentarEntrada = () => {
+  let sumarEntrada = () => {
     setContador(contador + 1)
 }
 
-  const reducirEntrada = () => {
-    setContador(contador - 1)
-}
+  let restarEntrada = () => {
+    if (contador <= 0) {
+      setContador(0)
+    } else {
+      setContador(contador - 1)
+    }
+  }
+
+  let precio = contador * 8;
   
   return (
     <div className="app-asientos">
@@ -143,7 +149,7 @@ function SelectorAsientos() {
           <div className="asientos-leyenda">
             <div className="contenedor-leyenda">
               <div className="circulo reservado"></div>
-              <p>Reservado</p>
+              <p>Ocupado</p>
             </div>
             <div className="contenedor-leyenda">
               <div className="circulo seleccionado"></div>
@@ -157,9 +163,10 @@ function SelectorAsientos() {
       </div>
       <div className="container">
       <ContadorEntradas
-        manejarSuma={aumentarEntrada}
+        gestionarSuma={sumarEntrada}
+        gestionarResta={restarEntrada}
         contador={contador}
-        manejarResta={reducirEntrada}
+        precioTotal={precio}
        />
       </div>
     </div> 
