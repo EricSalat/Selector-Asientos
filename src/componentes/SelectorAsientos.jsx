@@ -3,8 +3,6 @@ import "../hojas-de-estilo/SelectorAsientos.css";
 import ContadorEntradas from "./ContadorEntradas";
 
 
-
-
 function SelectorAsientos() {
   
   let [contador, setContador] = useState(0);
@@ -161,14 +159,12 @@ function SelectorAsientos() {
             </div>
           </div>
       </div>
-      <div className="container">
       <ContadorEntradas
         gestionarSuma={sumarEntrada}
         gestionarResta={restarEntrada}
         contador={contador}
         precioTotal={precio}
-       />
-      </div>
+       />  
     </div> 
   );
 }

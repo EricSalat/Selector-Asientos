@@ -1,3 +1,4 @@
+import React from "react";
 import { HiPlus, HiMinus } from "react-icons/hi";
 import "../hojas-de-estilo/ContadorEntradas.css";
 
