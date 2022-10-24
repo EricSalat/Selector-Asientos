@@ -4,7 +4,7 @@ import Pelicula from './componentes/Pelicula';
 import BotonMas from './componentes/BotonMas';
 import Buscador from './componentes/Buscador';
 import FlechaAtras from "./componentes/FlechaAtras";
-import Filtro from "./componentes/Filtro";
+import User from "./componentes/User";
 import "./App.css";
 
 
@@ -85,9 +85,9 @@ function Home() {
   return (
     <div className="container">
       <div className="h1-titles">
-        <FlechaAtras />
+          <FlechaAtras />
         <h1>Movie Tickets</h1>
-        <Filtro />
+        <User />
       </div>
       <Buscador />
       <div className="h2-titles">

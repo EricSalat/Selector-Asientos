@@ -23,6 +23,10 @@ p {
     font-size: 0.8rem;
 }
 
+.peliculas-contenedor {
+    margin-bottom: 15px;
+}
+
 .idioma-pelicula::after{
     content: "· ";
 }

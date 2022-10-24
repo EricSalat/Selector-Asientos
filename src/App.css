@@ -35,7 +35,7 @@ h1 {
 .peliculas-carrousel {
   display: flex;
   gap: 1rem;
-  margin-bottom: 3rem;
+  margin-bottom: 2rem;
   overflow-x: scroll;
   scroll-snap-type: x proximity;
   padding-right: 0;
@@ -51,4 +51,8 @@ h1 {
 
 .inactivo {
   display: none;
+}
+
+.hidden {
+  visibility: hidden;
 }
