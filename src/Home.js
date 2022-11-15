@@ -1,10 +1,9 @@
-import React from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import Pelicula from './componentes/Pelicula';
 import BotonMas from './componentes/BotonMas';
 import Buscador from './componentes/Buscador';
-import FlechaAtras from "./componentes/FlechaAtras";
-import User from "./componentes/User";
+import { Precios, User } from "./componentes/Iconos";
 import "./App.css";
 
 
@@ -79,69 +78,85 @@ function Home() {
       image: "monstruos-sa"
     },
   ]
+
+  const [carteleraTotal, setCarteleraTotal] = useState(cartelera)
+  const [searchValue, setSearchValue] = useState('')
+
+  let searchedMovies = [];
+
+  if (!searchValue.length >= 1 ) {
+    searchedMovies = carteleraTotal;
+  } else {
+    searchedMovies = carteleraTotal.filter(pelicula => {
+      // const peliculaTexto = pelicula.title.toLowerCase();
+      // const busquedaTexto = searchValue.toLowerCase();
+      // return peliculaTexto.includes(busquedaTexto);
+      return pelicula.title.includes(searchValue);
+    })
+  }
+
+  //TODO: Està ben fet però no va el buscador.
   
 
-    
+
+
   return (
     <div className="container">
       <div className="h1-titles">
-          <FlechaAtras />
+      <Link to="./componentes/Tarifas.jsx">
+        <Precios />
+      </Link>
         <h1>Movie Tickets</h1>
-        <User />
+        <Link to="./componentes/Login.jsx">
+          <User />
+        </Link>
       </div>
-      <Buscador />
+      <Buscador
+        searchValue={searchValue}
+        setSearchValue={setSearchValue}
+      />
       <div className="h2-titles">
         <h2>Películas en tendencia</h2>
         <Link to="/PantallaAsientos"><button>Ver más</button></Link>
       </div>
       <div className="contenedor-peliculas-carrousel">
         <div className="peliculas-carrousel">
-          <Pelicula
-            title={cartelera[0].title}
-            language={cartelera[0].language}
-            category={cartelera[0].genre}
-            img={cartelera[0].image}
-          />
-          <Pelicula
-            title={cartelera[1].title}
-            language={cartelera[1].language}
-            category={cartelera[1].genre}
-            img={cartelera[1].image}
-          />
-          <Pelicula
-            title={cartelera[2].title}
-            language={cartelera[2].language}
-            category={cartelera[2].genre}
-            img={cartelera[2].image}
-          />
+            {carteleraTotal.map(pelicula => (
+              <Pelicula
+               key={pelicula.title}             
+               title={pelicula.title}
+               language={pelicula.language}
+               category={pelicula.genre}
+               img={pelicula.image} 
+               />
+            ))}
+
         </div>
       </div>
+
+      
+      {/* 
+      * Funcionalitat a fer més edevant. Crear un criteri i un filtre per els pelicules en tendència.
       <div className="h2-titles">
         <h2>Peliculas nuevas</h2>
         <BotonMas />
       </div>
       <div className="contenedor-peliculas-carrousel">
         <div className="peliculas-carrousel">
-          <Pelicula
-            title={cartelera[3].title}
-            language={cartelera[3].language}
-            category={cartelera[3].genre}
-            img={cartelera[3].image}
-          />
-          <Pelicula
-            title={cartelera[4].title}
-            language={cartelera[4].language}
-            category={cartelera[4].genre}
-            img={cartelera[4].image}
-          />
-          <Pelicula
-            title={cartelera[5].title}
-            language={cartelera[5].language}
-            category={cartelera[5].genre}
-            img={cartelera[5].image}
-          />
+        {cartelera.map(pelicula => (
+              <Pelicula
+               key={pelicula.image}             
+               title={pelicula.title}
+               language={pelicula.language}
+               category={pelicula.genre}
+               img={pelicula.image} 
+               />
+            ))}
         </div>
-      </div>
+      </div> 
+      */}
+
+      
     </div>
   );
 }

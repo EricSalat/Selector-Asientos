@@ -1,0 +1,38 @@
+.contenedor-tarifas {
+  height: 100%;
+  width: 100%;
+}
+
+.tabla-tarifas {
+padding: 20px;
+display: flex;
+flex-wrap: wrap;
+justify-content: center;
+align-items: center;
+font-size: 1rem;
+}
+
+.tabla-tarifas table {
+  gap: 1rem;
+  border: 2px solid inherit;
+}
+.tabla-tarifas h1 {
+  font-size: 1.3rem;
+}
+
+.tabla-tarifas tr, .tabla-tarifas td, .tabla-tarifas th {
+  text-align: center;
+  border: 0px solid #000;
+  padding: 10px;
+  
+}
+
+.tabla-tarifas th {
+  background-color: var(--mainColor);
+  color: #fff;
+}
+.tabla-tarifas td {
+  background-color: var(--auxiliarColor);
+  font-weight: 500;
+  color: #000;
+}

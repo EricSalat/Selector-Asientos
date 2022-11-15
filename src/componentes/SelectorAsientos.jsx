@@ -1,53 +1,13 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import ContadorEntradas from "./ContadorEntradas";
-import FlechaAtras from "./FlechaAtras";
+import {FlechaAtras} from "./Iconos";
 import "../hojas-de-estilo/SelectorAsientos.css";
 
 
 function SelectorAsientos() {
-  
-  /*Per les butaques: Un array buit on posarem els id de les butaques sel·leccionades amb un push()
-  *Haure de fer un event Listener per cada div de les butaques. Amb un forEach o un for in o un for serà fàcil i es posarà automàticament a totes.
-  *Capturar el Evento de click o de active o de que algo se ha seleccionado
-  O coger el índice de butacas de un array.
-  */
 
 
-//Butacas
-//Con o sin ALL? Me va a añadir solo el último id?
-
-//TODO: Aquí es donde hay que configurar una función asíncrona, porque sino tendré que añadir event listener on load todo el rato.
-
-window.addEventListener("load", () => {
-
-function recorrerAsientos() {
-  var asiento = document.querySelector(".asiento"); //TODO: con querySelectorAll no los coge todo. Revisar su funcionamiento y encontrar la forma de que los coja a todos.
-
-  asiento.classList.add("clase-de-prueba"); //TODO: Conseguir meter todas estas "clases de prueba" para saber como meter muchos atributos HTMl desde JS
-
-  const asientos = 111;
-
-  for (var i = 0; i < asientos; i++) {
-      console.log(i);
-    };
-
-  }
-
-  recorrerAsientos()
-}); 
-  
-// asiento.setAttribute("id", "asientoprueba");
-
-  let butacasSeleccionadas = [];
-
-  // x.addEventListener(click, funcionDeReservarButaca)
-
-
-
-
-
-  
 //Contador precio entradas
   let [contador, setContador] = useState(0);
 
@@ -94,9 +54,6 @@ function recorrerAsientos() {
   }
 
   let precioTotal = contador * precioDia;
-
- 
-
 
 
   return (
